@@ -6,8 +6,8 @@ class WeatherController < ApplicationController
     response.add_speech("今日の天気は晴れ時々ぶたです")
     render json: response.build_response
 
-    # param = Param.new
-    # param = params
-    # param.save
+    param = Param.new
+    param.name = params.to_s
+    param.save
   end
 end
