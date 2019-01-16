@@ -7,7 +7,7 @@ class WeatherController < ApplicationController
     render json: response.build_response
 
     param = Param.new
-    param.name = request
+    param.name = params
     param.save
   end
 end
